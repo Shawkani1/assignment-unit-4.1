@@ -15,8 +15,8 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  console.log(`Hello! ${name}`);
-  return;
+  //console.log(`Hello! ${name}`);
+  return `Hello, ${name}!`;
 };
 helloName('Abdirahman');
 
@@ -45,8 +45,10 @@ function isPositive(number) {
   if (number > 0) {
     return true;
   }
-  else return false;
-}
+  else {
+    return false;
+ };
+};
 isPositive();
 console.log(isPositive(9));
 console.log(isPositive(-5));
@@ -59,20 +61,26 @@ console.log(isPositive(-5));
 //    array is empty, return `undefined`.
 function getLast(array) {
   return array[array.length - 1];
-  if (array.length === 0){
-    return undefined;
-  };
+  //if (array.length === 0)
+    //return undefined;
 };
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
+function find(value, array){
+  let bool = false;
   for (i = 0; i < array.length; i++){
-    if (array[i] === value);
-    return true;
+  if (array[i] == value){
+    bool = true;
+    break;
+  }
+  else {
+    bool = false;
   };
-   return false;
+
+};
+return bool;
 };
 
 // ----------------------
